@@ -1,0 +1,13 @@
+Step 1: Create Flutter project as firebase_demo
+Step 2: Add dependencies
+firebase_auth: ^1.0.1 # add this line
+ firebase_core: ^1.0.2 # add this line
+ Step 3: run the flutter pub get command 
+Step 4: Visit the console.firebase.google.com and create project
+Step 5:  Configure Firebase with Android and iOS Application
+	Register Android application
+	Download Android Config file
+	Enable Email/Password Authentication in Firebase
+	Initialize Firebase App
+		await Firebase.initializeApp();
+	Create a file authentication.dart for creating helper class for authentication.

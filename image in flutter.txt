@@ -1,0 +1,23 @@
+Image.asset('image name') //flutter code
+
+Step 2. Now you can copy your image to images sub-folder. The path should look like assets/images/yourImage.
+Step 3. Register the assets folder in pubspec.yaml file and update it. 
+
+a) To add images, write the following code:
+
+flutter:   
+  assets:
+        - assets/images/yourFirstImage.jpg
+        - assets/image/yourSecondImage.jpg
+
+Step 4. Insert the image code in the file, where you want to add the image.
+
+Image.asset('assets/images/GeeksforGeeks.jpg')
+
+Image.asset(
+                'assets/images/geeksforgeeks.jpg',
+                height: 400,
+                width: 400,
+              ),
+
+https://www.geeksforgeeks.org/how-to-add-images-in-flutter-app/

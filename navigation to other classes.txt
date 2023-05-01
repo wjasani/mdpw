@@ -1,0 +1,32 @@
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      routes: {
+        '/': (context) => HomePage(),
+        '/class1name': (context) => class1name(),
+      },
+    );
+  }
+}
+
+create class 1 and other classes
+put this in class
+body: Center(
+        child: ElevatedButton(
+          child: Text('Go to Details'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetailsPage()),
+            );
+          },
+        ),
+      ),
+
+
+navigator.push to go ahead and .pop to go back

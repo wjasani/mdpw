@@ -1,0 +1,52 @@
+class EmployeeForm extends StatefulWidget {
+  @override
+  _EmployeeFormState createState() => _EmployeeFormState();
+}
+
+class _EmployeeFormState extends State<EmployeeForm> {
+  final _formKey = GlobalKey<FormState>();
+
+  late String _password;
+  late String _email;
+
+  void submitform() {
+    print("Here");
+    showDialog(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+                content: Text("hi"),
+              ));
+  }
+
+
+
+child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                
+
+for em and pw  (pw extra => obscureText: true,)
+TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Please enter an email';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _email = value!;
+                  },
+                ),
+
+
+submit on pressed
+onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        _formKey.currentState!.save();
+                        // Do something with the form data
+                        submitform();
+                      }
+                    },
